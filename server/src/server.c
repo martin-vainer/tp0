@@ -9,7 +9,8 @@ int main(void) {
 
 	t_list* lista;
 	while (1) {
-		int cod_op = recibir_operacion(cliente_fd);
+		int cod_op = recibir_operacion(cliente_fd); //* al ser una funcion con un recive, es bloqueante, 
+		//es decir, no sigue indefinidamente el bucle sino que se queda a la esepera de algo.
 		switch (cod_op) {
 		case MENSAJE:
 			recibir_mensaje(cliente_fd);
